@@ -7,22 +7,22 @@ services:
       enable_traceability: false
       extra_capabilities:
       - capability_id: git.issues
-        dashboard_url: https://github.com/powellquiring/toolchaingittrigger/issues
+        dashboard_url: https://github.com/powellquiring/toolchaintest/issues
         display_name: Issues
         enabled: false
-        label: toolchaingittrigger
+        label: toolchaintest
         readme: false
         tags:
         - think
         - code
       git_id: github
       has_issues: false
-      label: toolchaingittrigger
+      label: toolchaintest
       legal: false
       owner_id: powellquiring
       private_repo: false
-      repo_name: toolchaingittrigger
-      repo_url: https://github.com/powellquiring/toolchaingittrigger.git
+      repo_name: toolchaintest
+      repo_url: https://github.com/powellquiring/toolchaintest.git
       root_url: ""
       source_repo_url: ""
       title: ""
