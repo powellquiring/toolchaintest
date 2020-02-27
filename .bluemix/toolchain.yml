@@ -3,7 +3,8 @@ services:
     parameters:
       # repo_url: https://github.com/powellquiring/toolchaintest.git
       # repo_url: $env.type
-      repo_url: 'type.' + $env.type
+      repo_url:>
+        'type.' + $env.type
       api_root_url: https://api.github.com
       authorized: github
       auto_init: false
