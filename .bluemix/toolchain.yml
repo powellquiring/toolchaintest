@@ -36,7 +36,8 @@ services:
     parameters:
       configuration:
         content:
-          $text: pipeline_pipeline01.yml
+          $text: >
+            'pipeline_pipeline01.yml'
         env:
           githubconsolidated00: githubconsolidated00
       label: dptekton
