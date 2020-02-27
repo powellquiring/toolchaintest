@@ -1,0 +1,12 @@
+inputs:
+- branch: master
+  path: .tekton
+  type: git
+  service: githubconsolidated00
+properties: []
+triggers:
+- branch: master
+  eventListener: BUILD
+  name: Git Trigger
+  type: git
+  service: githubconsolidated00

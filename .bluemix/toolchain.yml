@@ -1,0 +1,53 @@
+services:
+  githubconsolidated00:
+    parameters:
+      api_root_url: https://api.github.com
+      authorized: github
+      auto_init: false
+      enable_traceability: false
+      extra_capabilities:
+      - capability_id: git.issues
+        dashboard_url: https://github.com/powellquiring/toolchaingittrigger/issues
+        display_name: Issues
+        enabled: false
+        label: toolchaingittrigger
+        readme: false
+        tags:
+        - think
+        - code
+      git_id: github
+      has_issues: false
+      label: toolchaingittrigger
+      legal: false
+      owner_id: powellquiring
+      private_repo: false
+      repo_name: toolchaingittrigger
+      repo_url: https://github.com/powellquiring/toolchaingittrigger.git
+      root_url: ""
+      source_repo_url: ""
+      title: ""
+      token_url: https://otc-github-consolidated-broker.us-south.devops.cloud.ibm.com/github/token?git_id=github
+      type: link
+    service_id: githubconsolidated
+  pipeline01:
+    parameters:
+      configuration:
+        content:
+          $text: pipeline_pipeline01.yml
+        env:
+          githubconsolidated00: githubconsolidated00
+      label: dptekton
+      name: dptekton
+      services:
+      - githubconsolidated00
+      type: tekton
+      ui_pipeline: true
+    service_id: pipeline
+template:
+  description: broken
+  name: Build your own toolchain
+  required:
+  - githubconsolidated00
+toolchain:
+  name: broken
+version: 2
