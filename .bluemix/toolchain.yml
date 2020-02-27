@@ -1,6 +1,8 @@
 services:
   githubconsolidated00:
     parameters:
+      # repo_url: https://github.com/powellquiring/toolchaintest.git
+      repo_url: $env.type
       api_root_url: https://api.github.com
       authorized: github
       auto_init: false
@@ -22,7 +24,6 @@ services:
       owner_id: powellquiring
       private_repo: false
       repo_name: toolchaintest
-      repo_url: https://github.com/powellquiring/toolchaintest.git
       root_url: ""
       source_repo_url: ""
       title: ""
